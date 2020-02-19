@@ -1,3 +1,5 @@
+Credit to [Craftwork](https://craftwork.design/trello-concept/) for the redesign concept.
+
 ## Available Scripts
 
 ### `npm start`
