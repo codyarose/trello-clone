@@ -1,7 +1,11 @@
-import React from 'react';
+import React from 'react'
+import { Provider } from 'react-redux'
+import { store } from 'redux/configureStore'
 
 export const App = () => {
   return (
-    <div>App</div>
+    <Provider store={store}>
+      <div>App</div>
+    </Provider>
   )
 }
