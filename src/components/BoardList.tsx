@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect, useDispatch } from 'react-redux'
+import { v4 as uuidv4 } from 'uuid'
 import { fetchBoards } from 'redux/actions/boardActions'
 
 interface Props {
@@ -10,7 +11,7 @@ const BoardList: React.FC<Props> = ({ error, isFetching, boards }: any) => {
 	const dispatch = useDispatch()
 
 	useEffect(() => {
-		dispatch(fetchBoards())
+		fetchBoards()
 	}, [dispatch])
 
 	if (error) {
@@ -37,4 +38,11 @@ const mapStateToProps = (state: any) => ({
 	error: state.boards.error
 })
 
-export default connect(mapStateToProps)(BoardList)
+const mapDispatchToProps = {
+	fetchBoards
+}
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(BoardList)

@@ -1,15 +1,15 @@
 {
   "boards": [
     {
-      "id": 1,
+      "id": "55c10945-4e58-4d23-8591-b9e198c74dce",
       "name": "Board One"
     },
     {
-      "id": 2,
+      "id": "8e029e79-5c16-42ac-8a42-a20d9040693d",
       "name": "Board Two"
     },
     {
-      "id": 3,
+      "id": "404b99f1-d4c2-472d-9e8e-65813822cd61",
       "name": "Board Three"
     }
   ]
