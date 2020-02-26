@@ -6,13 +6,17 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import { createStore, applyMiddleware } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension'
+
 import { fetchBoards } from 'redux/actions/boardActions'
 import rootReducer from 'redux/reducers/boardsReducers'
 
 
 const store = createStore(
 	rootReducer,
-	applyMiddleware(thunk)
+	composeWithDevTools(
+		applyMiddleware(thunk)
+	)
 )
 
 store.dispatch(fetchBoards())
