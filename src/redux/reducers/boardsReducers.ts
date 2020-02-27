@@ -3,7 +3,6 @@ import {
 	FETCH_BOARDS_BEGIN,
 	FETCH_BOARDS_SUCCESS,
 	FETCH_BOARDS_ERROR,
-	ADD_BOARD
 } from '../actions/boardActions'
 
 const initialState = {
@@ -32,11 +31,6 @@ const boards = (state = initialState, action: any) => {
 				isLoading: false,
 				error: action.payload.error,
 				items: []
-			}
-		case ADD_BOARD:
-			return {
-				...state,
-				items: action.payload.data
 			}
 		default:
 			return state
