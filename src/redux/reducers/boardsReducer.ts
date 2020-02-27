@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux'
 import {
 	FETCH_ALL_BOARDS_BEGIN,
 	FETCH_ALL_BOARDS_SUCCESS,
@@ -11,7 +10,7 @@ const initialState = {
 	error: null
 }
 
-const boards = (state = initialState, action: any) => {
+export default function boards(state = initialState, action: any) {
 	switch (action.type) {
 		case FETCH_ALL_BOARDS_BEGIN:
 			return {
@@ -36,9 +35,3 @@ const boards = (state = initialState, action: any) => {
 			return state
 	}
 }
-
-const rootReducer = combineReducers({
-	boards
-})
-
-export default rootReducer
