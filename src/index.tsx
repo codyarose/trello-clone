@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from './App';
 import * as serviceWorker from './serviceWorker';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
@@ -10,6 +10,9 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 
 import { fetchBoards } from 'redux/actions/boardActions'
 import rootReducer from 'redux/reducers/boardsReducers'
+
+import { App } from './App';
+import Board from 'routes/Board'
 
 
 const store = createStore(
@@ -24,7 +27,12 @@ console.log('store', store.getState())
 
 ReactDOM.render(
 	<Provider store={store}>
-		<App />
+		<Router>
+			<Switch>
+				<Route path="/" exact component={App} />
+				<Route path="/board/:id" component={Board} />
+			</Switch>
+		</Router>
 	</Provider>,
 	document.getElementById('root')
 );
