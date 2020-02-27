@@ -12,8 +12,8 @@ const BoardList: React.FC<Props> = ({ error, isLoading, boards }: any) => {
 	const dispatch = useDispatch()
 
 	useEffect(() => {
-		fetchAllBoards()
-	}, [dispatch])
+		dispatch(fetchAllBoards())
+	}, [])
 
 	return (
 		<>
@@ -22,8 +22,8 @@ const BoardList: React.FC<Props> = ({ error, isLoading, boards }: any) => {
 			{!error && !isLoading && boards &&
 				<ul>
 					{boards.map((board: any) =>
-						<li key={board.shortLink}>
-							<Link to={`/board/${board.shortLink}`}>{board.name}</Link>
+						<li key={board.id}>
+							<Link to={`/board/${board.id}`}>{board.name}</Link>
 						</li>
 					)}
 				</ul>
@@ -38,11 +38,7 @@ const mapStateToProps = (state: any) => ({
 	error: state.boards.error
 })
 
-const mapDispatchToProps = {
-	fetchAllBoards
-}
 
 export default connect(
 	mapStateToProps,
-	mapDispatchToProps
 )(BoardList)
