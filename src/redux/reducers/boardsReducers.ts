@@ -8,7 +8,7 @@ import {
 
 const initialState = {
 	items: [],
-	isFetching: false,
+	isLoading: false,
 	error: null
 }
 
@@ -17,19 +17,19 @@ const boards = (state = initialState, action: any) => {
 		case FETCH_BOARDS_BEGIN:
 			return {
 				...state,
-				isFetching: true,
+				isLoading: true,
 				error: null
 			}
 		case FETCH_BOARDS_SUCCESS:
 			return {
 				...state,
-				isFetching: false,
+				isLoading: false,
 				items: action.payload.json
 			}
 		case FETCH_BOARDS_ERROR:
 			return {
 				...state,
-				isFetching: false,
+				isLoading: false,
 				error: action.payload.error,
 				items: []
 			}
