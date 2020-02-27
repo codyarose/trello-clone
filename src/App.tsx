@@ -1,7 +1,10 @@
-import React from 'react';
+import React from 'react'
+import BoardList from 'components/BoardList'
 
 export const App = () => {
-  return (
-    <div>App</div>
-  )
+	return (
+		<div>
+			<BoardList />
+		</div>
+	)
 }

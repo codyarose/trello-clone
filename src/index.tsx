@@ -3,7 +3,31 @@ import ReactDOM from 'react-dom';
 import { App } from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { Provider } from 'react-redux'
+import thunk from 'redux-thunk'
+import { createStore, applyMiddleware } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension'
+
+import { fetchBoards } from 'redux/actions/boardActions'
+import rootReducer from 'redux/reducers/boardsReducers'
+
+
+const store = createStore(
+	rootReducer,
+	composeWithDevTools(
+		applyMiddleware(thunk)
+	)
+)
+
+store.dispatch(fetchBoards())
+console.log('store', store.getState())
+
+ReactDOM.render(
+	<Provider store={store}>
+		<App />
+	</Provider>,
+	document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
