@@ -14,7 +14,7 @@ const Board: React.FC<Props> = ({ error, isLoading, board }: any) => {
 
 	useEffect(() => {
 		id && dispatch(fetchBoard(id))
-	}, [id])
+	}, [id, dispatch])
 
 	return (
 		<>

@@ -13,7 +13,7 @@ const BoardList: React.FC<Props> = ({ error, isLoading, boards }: any) => {
 
 	useEffect(() => {
 		dispatch(fetchAllBoards())
-	}, [])
+	}, [dispatch])
 
 	return (
 		<>
