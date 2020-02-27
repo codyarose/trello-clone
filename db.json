@@ -1,16 +1,351 @@
 {
   "boards": [
     {
-      "id": "55c10945-4e58-4d23-8591-b9e198c74dce",
-      "name": "Board One"
+      "id": "5e34cf6a4663684f2e768292",
+      "name": "Dashboard for Task Management",
+      "desc": "[Repo](https://github.com/codyarose/task-manager)\n[Mockup](https://cdn.dribbble.com/users/33073/screenshots/6816310/artboard.png)",
+      "descData": {
+        "emoji": {}
+      },
+      "closed": false,
+      "idOrganization": "5e337eea1a237f0176c5f8a3",
+      "pinned": false,
+      "starred": false,
+      "url": "https://trello.com/b/6w9hOMXY/dashboard-for-task-management",
+      "prefs": {
+        "permissionLevel": "org",
+        "hideVotes": false,
+        "voting": "disabled",
+        "comments": "members",
+        "invitations": "members",
+        "selfJoin": true,
+        "cardCovers": true,
+        "isTemplate": false,
+        "cardAging": "regular",
+        "calendarFeedEnabled": false,
+        "background": "5e346977a29a781be990ab74",
+        "backgroundImage": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/d553974ff6b16a48bcc4b6b9a7e3e68f/photo-1580424917967-a8867a6e676e"
+      },
+      "shortLink": "6w9hOMXY",
+      "subscribed": false,
+      "labelNames": {
+        "green": "",
+        "yellow": "",
+        "orange": "",
+        "red": "",
+        "purple": "",
+        "blue": "Common Components",
+        "sky": "General",
+        "lime": "Projects",
+        "pink": "Contracts",
+        "black": "Settings"
+      },
+      "dateLastActivity": "2020-02-26T00:30:07.590Z",
+      "dateLastView": "2020-02-26T15:32:41.088Z",
+      "lists": [
+        {
+          "id": "5e34cfa89bea9448a739cd1e",
+          "name": "Backlog",
+          "closed": false,
+          "idBoard": "5e34cf6a4663684f2e768292",
+          "pos": 65535,
+          "subscribed": false,
+          "softLimit": null
+        },
+        {
+          "id": "5e34cfaad0a4742f277f06c5",
+          "name": "Todo",
+          "closed": false,
+          "idBoard": "5e34cf6a4663684f2e768292",
+          "pos": 131071,
+          "subscribed": false,
+          "softLimit": null
+        },
+        {
+          "id": "5e34cfb0510b9277dbb115ed",
+          "name": "In-Progress",
+          "closed": false,
+          "idBoard": "5e34cf6a4663684f2e768292",
+          "pos": 196607,
+          "subscribed": false,
+          "softLimit": null
+        },
+        {
+          "id": "5e34cfb10773bf075df6f1de",
+          "name": "Done",
+          "closed": true,
+          "idBoard": "5e34cf6a4663684f2e768292",
+          "pos": 262143,
+          "subscribed": false,
+          "softLimit": null
+        },
+        {
+          "id": "5e55bc1fb6a09d16b1917e38",
+          "name": "Done",
+          "closed": false,
+          "idBoard": "5e34cf6a4663684f2e768292",
+          "pos": 278527,
+          "subscribed": false,
+          "softLimit": null
+        }
+      ],
+      "memberships": [
+        {
+          "id": "5e34cf6a4663684f2e768293",
+          "idMember": "5dba70c18a75f0231e6e1570",
+          "memberType": "admin",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5e34d7579109d7777916bc12",
+          "idMember": "5acd5ed1abd9b2beb245fbde",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5e34d77ce004f283a4ffe66c",
+          "idMember": "5c74905d9e2ba5553dd7a55b",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        }
+      ],
+      "shortUrl": "https://trello.com/b/6w9hOMXY"
     },
     {
-      "id": "8e029e79-5c16-42ac-8a42-a20d9040693d",
-      "name": "Board Two"
-    },
+      "id": "5e4d79614e7f3f847c08b832",
+      "name": "Trello Clone",
+      "desc": "",
+      "descData": null,
+      "closed": false,
+      "idOrganization": null,
+      "pinned": false,
+      "starred": false,
+      "url": "https://trello.com/b/UKXaxOSR/trello-clone",
+      "prefs": {
+        "permissionLevel": "private",
+        "hideVotes": false,
+        "voting": "disabled",
+        "comments": "members",
+        "invitations": "members",
+        "selfJoin": false,
+        "cardCovers": true,
+        "isTemplate": false,
+        "cardAging": "regular",
+        "calendarFeedEnabled": false,
+        "background": "5c089316ec56e76f18f5ff36",
+        "backgroundImage": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1363x2048/e0f095917582988d0129836ec068c4a7/photo-1467241850596-6a0de48568da"
+      },
+      "shortLink": "UKXaxOSR",
+      "subscribed": false,
+      "labelNames": {
+        "green": "Api",
+        "yellow": "Page",
+        "orange": "",
+        "red": "",
+        "purple": "Container",
+        "blue": "Component",
+        "sky": "",
+        "lime": "Util",
+        "pink": "",
+        "black": ""
+      },
+      "powerUps": [],
+      "dateLastActivity": "2020-02-19T19:30:02.702Z",
+      "dateLastView": "2020-02-26T15:41:52.657Z",
+      "lists": [
+        {
+          "id": "5e4d7a13561c2b54b58a8aff",
+          "name": "Backlog",
+          "closed": false,
+          "idBoard": "5e4d79614e7f3f847c08b832",
+          "pos": 8192,
+          "subscribed": false,
+          "softLimit": null
+        },
+        {
+          "id": "5e4d79614e7f3f847c08b833",
+          "name": "Todo",
+          "closed": false,
+          "idBoard": "5e4d79614e7f3f847c08b832",
+          "pos": 16384,
+          "subscribed": false,
+          "softLimit": null
+        },
+        {
+          "id": "5e4d79614e7f3f847c08b834",
+          "name": "In Progress",
+          "closed": false,
+          "idBoard": "5e4d79614e7f3f847c08b832",
+          "pos": 32768,
+          "subscribed": false,
+          "softLimit": null
+        },
+        {
+          "id": "5e4d79614e7f3f847c08b835",
+          "name": "Done",
+          "closed": false,
+          "idBoard": "5e4d79614e7f3f847c08b832",
+          "pos": 49152,
+          "subscribed": false,
+          "softLimit": null
+        }
+      ],
+      "memberships": [
+        {
+          "id": "5e4d79614e7f3f847c08b836",
+          "idMember": "5acd5ed1abd9b2beb245fbde",
+          "memberType": "admin",
+          "unconfirmed": false,
+          "deactivated": false
+        }
+      ],
+      "shortUrl": "https://trello.com/b/UKXaxOSR"
+    }
+  ],
+  "cards": [
     {
-      "id": "404b99f1-d4c2-472d-9e8e-65813822cd61",
-      "name": "Board Three"
+      "5e4d79614e7f3f847c08b832": [
+        {
+          "id": "5e4d7ba5b9d1084db7f89eea",
+          "closed": false,
+          "dateLastActivity": "2020-02-19T19:24:34.344Z",
+          "desc": "",
+          "descData": null,
+          "idBoard": "5e4d79614e7f3f847c08b832",
+          "idList": "5e4d7a13561c2b54b58a8aff",
+          "idShort": 1,
+          "idAttachmentCover": null,
+          "idLabels": [
+            "5e4d7961af988c41f28160c8"
+          ],
+          "name": "Navigation",
+          "shortLink": "xQnmjdh5",
+          "badges": {
+            "checkItems": 5,
+            "checkItemsChecked": 0,
+            "comments": 0,
+            "attachments": 4,
+            "description": false
+          },
+          "idChecklists": [
+            "5e4d8229322fa8676f21740c"
+          ],
+          "idMembers": [],
+          "labels": [
+            {
+              "id": "5e4d7961af988c41f28160c8",
+              "idBoard": "5e4d79614e7f3f847c08b832",
+              "name": "Component",
+              "color": "blue"
+            }
+          ],
+          "shortUrl": "https://trello.com/c/xQnmjdh5",
+          "subscribed": false,
+          "url": "https://trello.com/c/xQnmjdh5/1-navigation",
+          "cover": {
+            "idAttachment": null,
+            "color": null,
+            "idUploadedBackground": null,
+            "size": "normal",
+            "brightness": "light"
+          }
+        }
+      ]
+    }
+  ],
+  "checklists": [
+    {
+      "id": "5e4d8229322fa8676f21740c",
+      "name": "Checklist",
+      "idBoard": "5e4d79614e7f3f847c08b832",
+      "idCard": "5e4d7ba5b9d1084db7f89eea",
+      "checkItems": [
+        {
+          "idChecklist": "5e4d8229322fa8676f21740c",
+          "state": "incomplete",
+          "idMember": null,
+          "id": "5e4d89e355bed32442f9d46f",
+          "name": "Logo",
+          "nameData": null,
+          "due": null
+        },
+        {
+          "idChecklist": "5e4d8229322fa8676f21740c",
+          "state": "incomplete",
+          "idMember": null,
+          "id": "5e4d89ece0f4ca53fcb8c116",
+          "name": "Boards button",
+          "nameData": null,
+          "due": null
+        },
+        {
+          "idChecklist": "5e4d8229322fa8676f21740c",
+          "state": "incomplete",
+          "idMember": null,
+          "id": "5e4d89f2489c755c282cc78c",
+          "name": "Search bar",
+          "nameData": null,
+          "due": null
+        },
+        {
+          "idChecklist": "5e4d8229322fa8676f21740c",
+          "state": "incomplete",
+          "idMember": null,
+          "id": "5e4d8a348964fa58da3d6959",
+          "name": "Icons",
+          "nameData": null,
+          "due": null
+        },
+        {
+          "idChecklist": "5e4d8229322fa8676f21740c",
+          "state": "incomplete",
+          "idMember": null,
+          "id": "5e4d8a37aa3c566d39cd68f9",
+          "name": "User",
+          "nameData": null,
+          "due": null
+        }
+      ]
+    }
+  ],
+  "members": [
+    {
+      "id": "5acd5ed1abd9b2beb245fbde",
+      "avatarHash": "238117385255e0042908b92663018c1d",
+      "avatarUrl": "https://trello-avatars.s3.amazonaws.com/238117385255e0042908b92663018c1d",
+      "bio": "",
+      "bioData": {
+        "emoji": {}
+      },
+      "fullName": "Cody Rose",
+      "initials": "CR",
+      "memberType": "normal",
+      "url": "https://trello.com/codyarose",
+      "username": "codyarose",
+      "status": "disconnected",
+      "email": "crose992@gmail.com",
+      "gravatarHash": "7b243eaa2cd6b47c33a0263e1a597fb1",
+      "idBoards": [
+        "5e34cf6a4663684f2e768292",
+        "5e4d79614e7f3f847c08b832"
+      ],
+      "idOrganizations": [
+        "5e337eea1a237f0176c5f8a3"
+      ],
+      "prefs": {
+        "privacy": {
+          "fullName": "public",
+          "avatar": "public"
+        },
+        "sendSummaries": true,
+        "minutesBetweenSummaries": 1,
+        "minutesBeforeDeadlineToNotify": 1440,
+        "colorBlind": false,
+        "locale": "en-US"
+      }
     }
   ]
 }
