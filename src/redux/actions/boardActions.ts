@@ -25,20 +25,3 @@ export function fetchBoards() {
 		return dispatch(fetchBoardsSuccess(data))
 	}
 }
-
-export const ADD_BOARD = 'ADD_BOARD'
-export function addBoard({ id, name }: any) {
-	return (dispatch: any) => {
-		return axios.post('http://localhost:3001/boards', { id, name })
-			.then(({ data }) => dispatch(addBoardSuccess(data)))
-			.catch(error => console.error(error))
-	}
-}
-
-export const addBoardSuccess = (data: any) => ({
-	type: ADD_BOARD,
-	payload: {
-		id: data.id,
-		name: data.name
-	}
-})
