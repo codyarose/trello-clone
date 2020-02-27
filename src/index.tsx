@@ -8,7 +8,7 @@ import thunk from 'redux-thunk'
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
-import { fetchBoards } from 'redux/actions/boardActions'
+import { fetchAllBoards } from 'redux/actions/boardActions'
 import rootReducer from 'redux/reducers/boardsReducers'
 
 import { App } from './App';
@@ -22,7 +22,7 @@ const store = createStore(
 	)
 )
 
-store.dispatch(fetchBoards())
+store.dispatch(fetchAllBoards())
 console.log('store', store.getState())
 
 ReactDOM.render(

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect, useDispatch } from 'react-redux'
 // import { v4 as uuidv4 } from 'uuid'
-import { fetchBoards } from 'redux/actions/boardActions'
+import { fetchAllBoards } from 'redux/actions/boardActions'
 import { Link } from 'react-router-dom'
 
 interface Props {
@@ -12,7 +12,7 @@ const BoardList: React.FC<Props> = ({ error, isLoading, boards }: any) => {
 	const dispatch = useDispatch()
 
 	useEffect(() => {
-		fetchBoards()
+		fetchAllBoards()
 	}, [dispatch])
 
 	return (
@@ -39,7 +39,7 @@ const mapStateToProps = (state: any) => ({
 })
 
 const mapDispatchToProps = {
-	fetchBoards
+	fetchAllBoards
 }
 
 export default connect(

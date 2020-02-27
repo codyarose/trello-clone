@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
 import {
-	FETCH_BOARDS_BEGIN,
-	FETCH_BOARDS_SUCCESS,
-	FETCH_BOARDS_ERROR,
+	FETCH_ALL_BOARDS_BEGIN,
+	FETCH_ALL_BOARDS_SUCCESS,
+	FETCH_ALL_BOARDS_ERROR,
 } from '../actions/boardActions'
 
 const initialState = {
@@ -13,19 +13,19 @@ const initialState = {
 
 const boards = (state = initialState, action: any) => {
 	switch (action.type) {
-		case FETCH_BOARDS_BEGIN:
+		case FETCH_ALL_BOARDS_BEGIN:
 			return {
 				...state,
 				isLoading: true,
 				error: null
 			}
-		case FETCH_BOARDS_SUCCESS:
+		case FETCH_ALL_BOARDS_SUCCESS:
 			return {
 				...state,
 				isLoading: false,
 				items: action.payload.json
 			}
-		case FETCH_BOARDS_ERROR:
+		case FETCH_ALL_BOARDS_ERROR:
 			return {
 				...state,
 				isLoading: false,
