@@ -40,12 +40,13 @@ const sizes: { [key: string]: string } = {
 interface Props {
 	variant?: string
 	size?: string
+	className?: string
 }
 
-export const Icon = ({ variant = "info", size = sizes["s"] }: Props) => {
+export const Icon = ({ variant = "info", size = sizes["s"], className }: Props) => {
 	const Svg = icons[variant] || icons["message"]
 
 	const _size = variant === 'trello' ? sizes["xl"] : sizes[size] || sizes["s"]
 
-	return <Svg style={{ width: _size }} />
+	return <Svg style={{ width: _size }} className={className} />
 }
