@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect, useDispatch } from 'react-redux'
-import { fetchBoard } from 'redux/actions/boardActions'
+import { fetchBoard } from 'redux/modules/board'
 import { useParams } from 'react-router-dom'
 
 interface Props {
