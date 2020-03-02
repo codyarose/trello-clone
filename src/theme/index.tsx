@@ -13,18 +13,20 @@ const theme = {
 		font: '#000000'
 	},
 	dark: {
-
+		base: '#000000'
 	}
 }
 
-const GlobalStyle = createGlobalStyle`
-	body {
-		font-family: Poppins, sans-serif;
-		margin: 0;
-	}
-`
 
 export const Theme: FC<Props> = ({ children, mode }) => {
+	const GlobalStyle = createGlobalStyle`
+		body {
+			font-family: Poppins, sans-serif;
+			margin: 0;
+			background-color: ${theme[mode].base};
+		}
+	`
+
 	return (
 		<ThemeProvider theme={theme[mode]}>
 			<GlobalStyle />
