@@ -311,41 +311,29 @@
       ]
     }
   ],
-  "members": [
-    {
-      "id": "5acd5ed1abd9b2beb245fbde",
-      "avatarHash": "238117385255e0042908b92663018c1d",
-      "avatarUrl": "https://trello-avatars.s3.amazonaws.com/238117385255e0042908b92663018c1d",
-      "bio": "",
-      "bioData": {
-        "emoji": {}
+  "user": {
+    "id": "5acd5ed1abd9b2beb245fbde",
+    "avatarHash": "238117385255e0042908b92663018c1d",
+    "avatarUrl": "https://trello-avatars.s3.amazonaws.com/238117385255e0042908b92663018c1d",
+    "bio": "",
+    "fullName": "Cody Rose",
+    "initials": "CR",
+    "username": "codyarose",
+    "email": "crose992@gmail.com",
+    "idBoards": [
+      "5e34cf6a4663684f2e768292",
+      "5e4d79614e7f3f847c08b832"
+    ],
+    "idOrganizations": [
+      "5e337eea1a237f0176c5f8a3"
+    ],
+    "prefs": {
+      "privacy": {
+        "fullName": "public",
+        "avatar": "public"
       },
-      "fullName": "Cody Rose",
-      "initials": "CR",
-      "memberType": "normal",
-      "url": "https://trello.com/codyarose",
-      "username": "codyarose",
-      "status": "disconnected",
-      "email": "crose992@gmail.com",
-      "gravatarHash": "7b243eaa2cd6b47c33a0263e1a597fb1",
-      "idBoards": [
-        "5e34cf6a4663684f2e768292",
-        "5e4d79614e7f3f847c08b832"
-      ],
-      "idOrganizations": [
-        "5e337eea1a237f0176c5f8a3"
-      ],
-      "prefs": {
-        "privacy": {
-          "fullName": "public",
-          "avatar": "public"
-        },
-        "sendSummaries": true,
-        "minutesBetweenSummaries": 1,
-        "minutesBeforeDeadlineToNotify": 1440,
-        "colorBlind": false,
-        "locale": "en-US"
-      }
+      "colorBlind": false,
+      "locale": "en-US"
     }
-  ]
+  }
 }
