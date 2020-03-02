@@ -1,10 +1,23 @@
 import React from 'react'
-import BoardList from 'components/BoardList'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Provider } from 'react-redux'
+
+import { Theme } from 'theme'
+import store from 'redux/configureStore'
+import { Home } from 'routes/Home'
+import Board from 'routes/Board'
 
 export const App = () => {
 	return (
-		<div>
-			<BoardList />
-		</div>
+		<Provider store={store}>
+			<Theme mode="light">
+				<Router basename="trello-clone">
+					<Switch>
+						<Route path="/" exact component={Home} />
+						<Route path="/board/:id" component={Board} />
+					</Switch>
+				</Router>
+			</Theme>
+		</Provider>
 	)
 }
