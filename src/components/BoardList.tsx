@@ -1,27 +1,17 @@
-import React, { useEffect } from 'react'
-import { connect, useDispatch } from 'react-redux'
-// import { v4 as uuidv4 } from 'uuid'
-import { fetchAllBoards } from 'redux/actions/boardActions'
+import React, { FC } from 'react'
 import { Link } from 'react-router-dom'
+// import { v4 as uuidv4 } from 'uuid'
 
-interface Props {
+import { RootState } from 'redux/modules/allBoards'
 
-}
-
-const BoardList: React.FC<Props> = ({ error, isLoading, boards }: any) => {
-	const dispatch = useDispatch()
-
-	useEffect(() => {
-		dispatch(fetchAllBoards())
-	}, [dispatch])
-
+export const BoardList: FC<RootState> = ({ error, isLoading, items }) => {
 	return (
 		<>
 			{error && <div>Error: {error.message}</div>}
 			{isLoading && <div>Loading...</div>}
-			{!error && !isLoading && boards &&
+			{items &&
 				<ul>
-					{boards.map((board: any) =>
+					{items.map((board: any) =>
 						<li key={board.id}>
 							<Link to={`/board/${board.id}`}>{board.name}</Link>
 						</li>
@@ -31,14 +21,3 @@ const BoardList: React.FC<Props> = ({ error, isLoading, boards }: any) => {
 		</>
 	)
 }
-
-const mapStateToProps = (state: any) => ({
-	boards: state.boards.items,
-	isLoading: state.boards.isLoading,
-	error: state.boards.error
-})
-
-
-export default connect(
-	mapStateToProps,
-)(BoardList)
