@@ -4,8 +4,10 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 
 import board from './modules/board'
 import allBoards from './modules/allBoards'
+import user from './modules/user'
 
 const reducer = combineReducers({
+	user,
 	allBoards,
 	board
 })
