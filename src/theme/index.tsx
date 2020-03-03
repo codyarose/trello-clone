@@ -6,17 +6,29 @@ interface Props {
 	mode: 'light' | 'dark'
 }
 
-const theme = {
-	light: {
-		base: '#ffffff',
-		paper: '#f4f4f4',
-		font: '#000000'
-	},
-	dark: {
-		base: '#000000'
+interface ITheme {
+	[key: string]: {
+		base: string
+		paper: string
+		font: string
+		accent: string
 	}
 }
 
+const theme: ITheme = {
+	light: {
+		base: '#ffffff',
+		paper: '#f4f4f4',
+		font: '#000000',
+		accent: '0,0,0'
+	},
+	dark: {
+		base: '#000000',
+		paper: 'gray',
+		font: '#ffffff',
+		accent: '255,255,255',
+	}
+}
 
 export const Theme: FC<Props> = ({ children, mode }) => {
 	const GlobalStyle = createGlobalStyle`
@@ -24,6 +36,7 @@ export const Theme: FC<Props> = ({ children, mode }) => {
 			font-family: Poppins, sans-serif;
 			margin: 0;
 			background-color: ${theme[mode].base};
+			color: ${theme[mode].font}
 		}
 	`
 

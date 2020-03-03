@@ -34,6 +34,7 @@ const icons: { [key: string]: FC<SVGProps<SVGSVGElement>> } = {
 const sizes: { [key: string]: string } = {
 	s: "16px",
 	m: "20px",
+	lg: "24px",
 	xl: "76px"
 }
 
@@ -48,5 +49,9 @@ export const Icon = ({ variant = "info", size = sizes["s"], className }: Props) 
 
 	const _size = variant === 'trello' ? sizes["xl"] : sizes[size] || sizes["s"]
 
-	return <Svg style={{ width: _size }} className={className} />
+	return (
+		<div style={{ minWidth: _size, maxWidth: _size, display: 'flex' }}>
+			<Svg width="100%" className={className} />
+		</div>
+	)
 }
