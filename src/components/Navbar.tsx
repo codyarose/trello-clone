@@ -35,7 +35,7 @@ export const Navbar: FC = () => {
 						<StyledTrello variant="trello" />
 						<Separator />
 						<Link to="/">
-							<BoardsIcon variant="trelloIcon" size="m" />
+							<BoardsIcon variant="trelloIcon" size="lg" />
 							<span>Boards</span>
 						</Link>
 						<Separator />
