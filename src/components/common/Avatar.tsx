@@ -14,7 +14,6 @@ const sizes: { [key: string]: string } = {
 }
 
 export const Avatar: FC<Props> = ({ url, alt, size }) => {
-	console.log(size)
 	return (
 		<StyledAvatar size={size ? sizes[size] : sizes["md"]}>
 			<img src={url} alt={alt} />
