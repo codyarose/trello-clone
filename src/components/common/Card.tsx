@@ -14,15 +14,24 @@ interface Props {
 }
 
 export const Card: FC<Props> = ({ type, title, desc, members }) => {
+	const membersToShow = members.slice(0, 4)
+	const membersToHide = members.slice(3)
+
 	return (
 		<CardContainer>
 			<CardTitle variant="md">{title}</CardTitle>
 			<CardDesc variant="sm">{desc}</CardDesc>
-			{!!members.length && <CardMembers>
-				{members.map(member =>
-					<Avatar url={`https://i.pravatar.cc/30?u=${member.id}`} alt="Avatar" size="md" />
-				)}
-			</CardMembers>}
+			{!!members.length &&
+				<CardMembers>
+					{membersToShow.map((member, i, arr) => {
+						if (members.length > 4 && arr.length - 1 === i) {
+							return `+${membersToHide.length}`
+						}
+						return <Avatar url={`https://i.pravatar.cc/30?u=${member.id}`} alt="Avatar" size="md" />
+					}
+					)}
+				</CardMembers>
+			}
 			<CardIcons>
 				{type === 'board' && <Icon variant="arrow" />}
 			</CardIcons>
