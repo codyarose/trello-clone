@@ -7,8 +7,8 @@ const getComponent = (variant: string) => {
 		case 'xl':
 			return 'h2'
 		case 'lg':
-			return 'h3'
 		case 'md':
+			return 'h3'
 		case 'sm':
 			return 'p'
 		default:
@@ -52,6 +52,7 @@ const SMStyles = css`
 
 const StyledTypography = styled.div<Types>`
 	color: ${({ theme }) => theme.font};
+	margin: 0;
 	${({ variant }) => variant === 'xl' && XLStyles}
 	${({ variant }) => variant === 'lg' && LGStyles}
 	${({ variant }) => variant === 'md' && MDStyles}

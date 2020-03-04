@@ -3,31 +3,15 @@
     {
       "id": "5e34cf6a4663684f2e768292",
       "name": "Dashboard for Task Management",
-      "desc": "[Repo](https://github.com/codyarose/task-manager)\n[Mockup](https://cdn.dribbble.com/users/33073/screenshots/6816310/artboard.png)",
-      "descData": {
-        "emoji": {}
-      },
+      "desc": "Board description lorem ipsum dolor sit amet",
       "closed": false,
       "idOrganization": "5e337eea1a237f0176c5f8a3",
-      "pinned": false,
-      "starred": false,
       "url": "https://trello.com/b/6w9hOMXY/dashboard-for-task-management",
       "prefs": {
         "permissionLevel": "org",
-        "hideVotes": false,
-        "voting": "disabled",
         "comments": "members",
-        "invitations": "members",
-        "selfJoin": true,
-        "cardCovers": true,
-        "isTemplate": false,
-        "cardAging": "regular",
-        "calendarFeedEnabled": false,
-        "background": "5e346977a29a781be990ab74",
-        "backgroundImage": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/d553974ff6b16a48bcc4b6b9a7e3e68f/photo-1580424917967-a8867a6e676e"
+        "background": "#f4f4f4"
       },
-      "shortLink": "6w9hOMXY",
-      "subscribed": false,
       "labelNames": {
         "green": "",
         "yellow": "",
@@ -40,8 +24,6 @@
         "pink": "Contracts",
         "black": "Settings"
       },
-      "dateLastActivity": "2020-02-26T00:30:07.590Z",
-      "dateLastView": "2020-02-26T15:32:41.088Z",
       "lists": [
         {
           "id": "5e34cfa89bea9448a739cd1e",
@@ -110,36 +92,42 @@
           "memberType": "normal",
           "unconfirmed": false,
           "deactivated": false
+        },
+        {
+          "id": "5e34d77ce004f283a4fdk4ow",
+          "idMember": "5c74905d9e2ba5553dd7a55b",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5e34d77ce004f283a4fdff56y",
+          "idMember": "5c74905d9e2ba5553dd7a55b",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
+        },
+        {
+          "id": "5e34d77ce004f283a4fdfasdf",
+          "idMember": "5c74905d9e2ba5553dd7a55b",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false
         }
-      ],
-      "shortUrl": "https://trello.com/b/6w9hOMXY"
+      ]
     },
     {
       "id": "5e4d79614e7f3f847c08b832",
       "name": "Trello Clone",
       "desc": "",
-      "descData": null,
       "closed": false,
       "idOrganization": null,
-      "pinned": false,
-      "starred": false,
       "url": "https://trello.com/b/UKXaxOSR/trello-clone",
       "prefs": {
         "permissionLevel": "private",
-        "hideVotes": false,
-        "voting": "disabled",
-        "comments": "members",
-        "invitations": "members",
-        "selfJoin": false,
         "cardCovers": true,
-        "isTemplate": false,
-        "cardAging": "regular",
-        "calendarFeedEnabled": false,
-        "background": "5c089316ec56e76f18f5ff36",
-        "backgroundImage": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1363x2048/e0f095917582988d0129836ec068c4a7/photo-1467241850596-6a0de48568da"
+        "background": "#EEF7FB"
       },
-      "shortLink": "UKXaxOSR",
-      "subscribed": false,
       "labelNames": {
         "green": "Api",
         "yellow": "Page",
@@ -152,9 +140,6 @@
         "pink": "",
         "black": ""
       },
-      "powerUps": [],
-      "dateLastActivity": "2020-02-19T19:30:02.702Z",
-      "dateLastView": "2020-02-26T15:41:52.657Z",
       "lists": [
         {
           "id": "5e4d7a13561c2b54b58a8aff",
@@ -201,8 +186,15 @@
           "unconfirmed": false,
           "deactivated": false
         }
-      ],
-      "shortUrl": "https://trello.com/b/UKXaxOSR"
+      ]
+    }
+  ],
+  "lists": [
+    {
+      "id": "5e34cfa89bea9448a739cd1e",
+      "name": "Backlog",
+      "closed": false,
+      "idBoard": "5e34cf6a4663684f2e768292"
     }
   ],
   "cards": [
@@ -211,9 +203,7 @@
         {
           "id": "5e4d7ba5b9d1084db7f89eea",
           "closed": false,
-          "dateLastActivity": "2020-02-19T19:24:34.344Z",
           "desc": "",
-          "descData": null,
           "idBoard": "5e4d79614e7f3f847c08b832",
           "idList": "5e4d7a13561c2b54b58a8aff",
           "idShort": 1,
@@ -222,13 +212,11 @@
             "5e4d7961af988c41f28160c8"
           ],
           "name": "Navigation",
-          "shortLink": "xQnmjdh5",
           "badges": {
             "checkItems": 5,
             "checkItemsChecked": 0,
             "comments": 0,
-            "attachments": 4,
-            "description": false
+            "attachments": 4
           },
           "idChecklists": [
             "5e4d8229322fa8676f21740c"
@@ -242,9 +230,6 @@
               "color": "blue"
             }
           ],
-          "shortUrl": "https://trello.com/c/xQnmjdh5",
-          "subscribed": false,
-          "url": "https://trello.com/c/xQnmjdh5/1-navigation",
           "cover": {
             "idAttachment": null,
             "color": null,
@@ -268,45 +253,35 @@
           "state": "incomplete",
           "idMember": null,
           "id": "5e4d89e355bed32442f9d46f",
-          "name": "Logo",
-          "nameData": null,
-          "due": null
+          "name": "Logo"
         },
         {
           "idChecklist": "5e4d8229322fa8676f21740c",
           "state": "incomplete",
           "idMember": null,
           "id": "5e4d89ece0f4ca53fcb8c116",
-          "name": "Boards button",
-          "nameData": null,
-          "due": null
+          "name": "Boards button"
         },
         {
           "idChecklist": "5e4d8229322fa8676f21740c",
           "state": "incomplete",
           "idMember": null,
           "id": "5e4d89f2489c755c282cc78c",
-          "name": "Search bar",
-          "nameData": null,
-          "due": null
+          "name": "Search bar"
         },
         {
           "idChecklist": "5e4d8229322fa8676f21740c",
           "state": "incomplete",
           "idMember": null,
           "id": "5e4d8a348964fa58da3d6959",
-          "name": "Icons",
-          "nameData": null,
-          "due": null
+          "name": "Icons"
         },
         {
           "idChecklist": "5e4d8229322fa8676f21740c",
           "state": "incomplete",
           "idMember": null,
           "id": "5e4d8a37aa3c566d39cd68f9",
-          "name": "User",
-          "nameData": null,
-          "due": null
+          "name": "User"
         }
       ]
     }

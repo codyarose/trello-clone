@@ -1,10 +1,13 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
+import { Icon } from './Icon'
 
 interface Props {
-	url: string
+	url?: string
 	size?: string
-	alt: string
+	alt?: string
+	type?: 'normal' | 'overflow' | 'add'
+	overflow?: number
 }
 
 const sizes: { [key: string]: string } = {
@@ -13,10 +16,12 @@ const sizes: { [key: string]: string } = {
 	lg: "40px",
 }
 
-export const Avatar: FC<Props> = ({ url, alt, size }) => {
+export const Avatar: FC<Props> = ({ url, alt, size, type = 'normal', overflow }) => {
 	return (
 		<StyledAvatar size={size ? sizes[size] : sizes["md"]}>
-			<img src={url} alt={alt} />
+			{type === 'normal' && <img src={url} alt={alt} />}
+			{type === 'add' && <StyledLast><Icon size="xs" variant="plus" /></StyledLast>}
+			{type === 'overflow' && <StyledLast>+{overflow}</StyledLast>}
 		</StyledAvatar>
 	)
 }
@@ -31,4 +36,15 @@ const StyledAvatar = styled.div<Partial<Props>>`
 		height: 100%;
 		object-fit: cover;
 	}
+`
+
+const StyledLast = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(${({ theme }) => theme.accent});
+	color: #fff;
+	font-size: 10px;
 `

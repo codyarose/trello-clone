@@ -1,5 +1,6 @@
 import React, { FC, SVGProps } from 'react'
 import { ReactComponent as message } from './message.svg'
+import { ReactComponent as checkbox } from './checkbox.svg'
 import { ReactComponent as heart } from './heart.svg'
 import { ReactComponent as attachment } from './attachment.svg'
 import { ReactComponent as plus } from './plus.svg'
@@ -16,6 +17,7 @@ import { ReactComponent as trelloIcon } from './trello-icon.svg'
 
 const icons: { [key: string]: FC<SVGProps<SVGSVGElement>> } = {
 	message,
+	checkbox,
 	heart,
 	attachment,
 	plus,
@@ -32,6 +34,7 @@ const icons: { [key: string]: FC<SVGProps<SVGSVGElement>> } = {
 }
 
 const sizes: { [key: string]: string } = {
+	xs: "12px",
 	s: "16px",
 	m: "20px",
 	lg: "24px",
