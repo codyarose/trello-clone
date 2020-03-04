@@ -16,11 +16,12 @@ export const BoardList: FC<RootState> = ({ error, isLoading, items }) => {
 						<li key={board.id}>
 							<Link to={`/board/${board.id}`}>
 								<Card
-									type="board"
+									type="card"
 									title={board.name}
 									desc={board.desc}
 									members={board.memberships}
 									background={board.prefs.background}
+									imgUrl="https://images.unsplash.com/photo-1583336490127-4f08ed1e93dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=10"
 								/>
 							</Link>
 						</li>

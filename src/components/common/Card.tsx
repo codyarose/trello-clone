@@ -12,16 +12,22 @@ interface Props {
 	desc: string
 	members: any[]
 	background?: string
+	imgUrl?: string
 }
 
-export const Card: FC<Props> = ({ type, title, desc, members, background }) => {
+export const Card: FC<Props> = ({ type, title, desc, members, background, imgUrl }) => {
 	const membersToShow = members.slice(0, 4)
 	const membersToHide = members.slice(3)
 
 	return (
-		<CardContainer background={background}>
+		<CardContainer background={background} type={type}>
+			{type === "card" && imgUrl &&
+				<CardImage>
+					<img src={imgUrl} alt="" />
+				</CardImage>
+			}
 			<CardTitle variant="md">{title}</CardTitle>
-			<CardDesc variant="sm">{desc}</CardDesc>
+			{desc && <CardDesc variant="sm">{desc}</CardDesc>}
 			{!!members.length &&
 				<CardMembers>
 					{membersToShow.map((member, i, arr) => {
@@ -49,12 +55,33 @@ const CardContainer = styled(Paper) <Partial<Props>>`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto;
-	grid-template-areas:
+	grid-template-areas: ${({ type }) => type === 'board' ?
+		`'title title'
+		'desc desc'
+		'members icons'`
+		: type === 'card' &&
+		`'image image'
+		'tags tags'
 		'title title'
 		'desc desc'
-		'members icons';
+		'members icons'`
+	};
 	background-color: ${({ background }) => background};
 	padding: 20px;
+`
+
+const CardImage = styled.div`
+	grid-area: image;
+	width: 100%;
+	height: 170px;
+	border-radius: 8px;
+	margin-bottom: 1rem;
+	overflow: hidden;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 `
 
 const CardTitle = styled(Typography)`
