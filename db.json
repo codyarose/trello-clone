@@ -23,8 +23,7 @@
         "isTemplate": false,
         "cardAging": "regular",
         "calendarFeedEnabled": false,
-        "background": "5e346977a29a781be990ab74",
-        "backgroundImage": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/d553974ff6b16a48bcc4b6b9a7e3e68f/photo-1580424917967-a8867a6e676e"
+        "background": "#f4f4f4"
       },
       "shortLink": "6w9hOMXY",
       "subscribed": false,
@@ -135,8 +134,7 @@
         "isTemplate": false,
         "cardAging": "regular",
         "calendarFeedEnabled": false,
-        "background": "5c089316ec56e76f18f5ff36",
-        "backgroundImage": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1363x2048/e0f095917582988d0129836ec068c4a7/photo-1467241850596-6a0de48568da"
+        "background": "#EEF7FB"
       },
       "shortLink": "UKXaxOSR",
       "subscribed": false,
