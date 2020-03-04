@@ -7,18 +7,20 @@ import { Icon } from '../Icon'
 
 import { Labels } from './Labels'
 import { Members } from './Members'
+import { Badges } from './Badges'
 
 interface Props {
-	type: string
+	type: 'board' | 'card'
 	title: string
 	desc: string
 	members: any[]
 	background?: string
 	imgUrl?: string
 	labels?: any[]
+	badges: any
 }
 
-export const Card: FC<Props> = ({ type, title, desc, members, background, imgUrl, labels }) => {
+export const Card: FC<Props> = ({ type, title, desc, members, background, imgUrl, labels, badges }) => {
 
 	return (
 		<CardContainer background={background} type={type}>
@@ -33,9 +35,7 @@ export const Card: FC<Props> = ({ type, title, desc, members, background, imgUrl
 			<CardTitle variant="md">{title}</CardTitle>
 			{desc && <CardDesc variant="sm">{desc}</CardDesc>}
 			{!!members.length && <Members array={members} />}
-			<CardIcons>
-				{type === 'board' && <Icon variant="arrow" />}
-			</CardIcons>
+			<Badges type={type} data={badges} />
 		</CardContainer>
 	)
 }
@@ -47,13 +47,13 @@ const CardContainer = styled(Paper) <Partial<Props>>`
 	grid-template-areas: ${({ type }) => type === 'board' ?
 		`'title title'
 		'desc desc'
-		'members icons'`
+		'members badges'`
 		: type === 'card' &&
 		`'image image'
 		'labels labels'
 		'title title'
 		'desc desc'
-		'members icons'`
+		'members badges'`
 	};
 	background-color: ${({ background }) => background};
 	padding: 20px;
@@ -81,13 +81,5 @@ const CardTitle = styled(Typography)`
 
 const CardDesc = styled(Typography)`
 	grid-area: desc;
-	opacity: .4;
-`
-
-const CardIcons = styled.div`
-	grid-area: icons;
-	display: flex;
-	align-items: flex-end;
-	justify-content: flex-end;
 	opacity: .4;
 `
