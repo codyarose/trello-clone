@@ -11,14 +11,15 @@ interface Props {
 	title: string
 	desc: string
 	members: any[]
+	background?: string
 }
 
-export const Card: FC<Props> = ({ type, title, desc, members }) => {
+export const Card: FC<Props> = ({ type, title, desc, members, background }) => {
 	const membersToShow = members.slice(0, 4)
 	const membersToHide = members.slice(3)
 
 	return (
-		<CardContainer>
+		<CardContainer background={background}>
 			<CardTitle variant="md">{title}</CardTitle>
 			<CardDesc variant="sm">{desc}</CardDesc>
 			{!!members.length &&
@@ -27,7 +28,12 @@ export const Card: FC<Props> = ({ type, title, desc, members }) => {
 						if (members.length > 4 && arr.length - 1 === i) {
 							return `+${membersToHide.length}`
 						}
-						return <Avatar url={`https://i.pravatar.cc/30?u=${member.id}`} alt="Avatar" size="md" />
+						return <Avatar
+							key={member.id}
+							url={`https://i.pravatar.cc/30?u=${member.id}`}
+							alt="Avatar"
+							size="md"
+						/>
 					}
 					)}
 				</CardMembers>
@@ -39,8 +45,7 @@ export const Card: FC<Props> = ({ type, title, desc, members }) => {
 	)
 }
 
-const CardContainer = styled(Paper)`
-	padding: 20px;
+const CardContainer = styled(Paper) <Partial<Props>>`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto;
@@ -48,6 +53,8 @@ const CardContainer = styled(Paper)`
 		'title title'
 		'desc desc'
 		'members icons';
+	background-color: ${({ background }) => background};
+	padding: 20px;
 `
 
 const CardTitle = styled(Typography)`

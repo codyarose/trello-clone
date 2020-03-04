@@ -6,7 +6,6 @@ import { RootState } from 'redux/modules/allBoards'
 import { Card } from 'components/common/Card'
 
 export const BoardList: FC<RootState> = ({ error, isLoading, items }) => {
-	console.log('load', !isLoading)
 	return (
 		<>
 			{error && <div>Error: {error.message}</div>}
@@ -21,6 +20,7 @@ export const BoardList: FC<RootState> = ({ error, isLoading, items }) => {
 									title={board.name}
 									desc={board.desc}
 									members={board.memberships}
+									background={board.prefs.background}
 								/>
 							</Link>
 						</li>
