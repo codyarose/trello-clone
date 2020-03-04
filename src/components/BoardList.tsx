@@ -22,6 +22,13 @@ export const BoardList: FC<RootState> = ({ error, isLoading, items }) => {
 		}
 	]
 
+	const badges = {
+		"checkItems": 5,
+		"checkItemsChecked": 0,
+		"comments": 9,
+		"attachments": 4
+	}
+
 	return (
 		<>
 			{error && <div>Error: {error.message}</div>}
@@ -39,6 +46,7 @@ export const BoardList: FC<RootState> = ({ error, isLoading, items }) => {
 									background={board.prefs.background}
 									imgUrl="https://images.unsplash.com/photo-1583336490127-4f08ed1e93dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=10"
 									labels={labels}
+									badges={badges}
 								/>
 							</Link>
 						</li>
@@ -56,4 +64,8 @@ const StyledTrack = styled.ul`
 	display: grid;
 	grid-template-columns: repeat(auto-fill, 362px);
 	gap: 30px;
+	li > a {
+		text-decoration: none;
+		color: inherit;
+	}
 `
