@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 import { Paper } from '../Paper'
 import { Typography } from '../Typography'
-import { Icon } from '../Icon'
 
 import { Labels } from './Labels'
 import { Members } from './Members'
