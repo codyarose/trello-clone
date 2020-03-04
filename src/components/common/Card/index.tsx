@@ -1,10 +1,13 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 
-import { Paper } from './Paper'
-import { Typography } from './Typography'
-import { Avatar } from './Avatar'
-import { Icon } from './Icon'
+import { Paper } from '../Paper'
+import { Typography } from '../Typography'
+import { Avatar } from '../Avatar'
+import { Icon } from '../Icon'
+
+import { Labels } from './Labels'
+import { Members } from './Members'
 
 interface Props {
 	type: string
@@ -13,11 +16,10 @@ interface Props {
 	members: any[]
 	background?: string
 	imgUrl?: string
+	labels?: any[]
 }
 
-export const Card: FC<Props> = ({ type, title, desc, members, background, imgUrl }) => {
-	const membersToShow = members.slice(0, 4)
-	const membersToHide = members.slice(3)
+export const Card: FC<Props> = ({ type, title, desc, members, background, imgUrl, labels }) => {
 
 	return (
 		<CardContainer background={background} type={type}>
@@ -26,24 +28,12 @@ export const Card: FC<Props> = ({ type, title, desc, members, background, imgUrl
 					<img src={imgUrl} alt="" />
 				</CardImage>
 			}
+			{type === "card" && labels && !!labels.length &&
+				<Labels array={labels} />
+			}
 			<CardTitle variant="md">{title}</CardTitle>
 			{desc && <CardDesc variant="sm">{desc}</CardDesc>}
-			{!!members.length &&
-				<CardMembers>
-					{membersToShow.map((member, i, arr) => {
-						if (members.length > 4 && arr.length - 1 === i) {
-							return `+${membersToHide.length}`
-						}
-						return <Avatar
-							key={member.id}
-							url={`https://i.pravatar.cc/30?u=${member.id}`}
-							alt="Avatar"
-							size="md"
-						/>
-					}
-					)}
-				</CardMembers>
-			}
+			{!!members.length && <Members array={members} />}
 			<CardIcons>
 				{type === 'board' && <Icon variant="arrow" />}
 			</CardIcons>
@@ -61,7 +51,7 @@ const CardContainer = styled(Paper) <Partial<Props>>`
 		'members icons'`
 		: type === 'card' &&
 		`'image image'
-		'tags tags'
+		'labels labels'
 		'title title'
 		'desc desc'
 		'members icons'`
@@ -92,16 +82,7 @@ const CardTitle = styled(Typography)`
 
 const CardDesc = styled(Typography)`
 	grid-area: desc;
-	margin-bottom: 1.5rem;
 	opacity: .4;
-`
-
-const CardMembers = styled.div`
-	grid-area: members;
-	display: flex;
-	& > * {
-		margin-right: -.75rem;
-	}
 `
 
 const CardIcons = styled.div`
