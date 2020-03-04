@@ -34,6 +34,7 @@ const icons: { [key: string]: FC<SVGProps<SVGSVGElement>> } = {
 }
 
 const sizes: { [key: string]: string } = {
+	xs: "12px",
 	s: "16px",
 	m: "20px",
 	lg: "24px",
