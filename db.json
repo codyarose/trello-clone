@@ -5,11 +5,8 @@
       "name": "Dashboard for Task Management",
       "desc": "Board description lorem ipsum dolor sit amet",
       "closed": false,
-      "idOrganization": "5e337eea1a237f0176c5f8a3",
-      "url": "https://trello.com/b/6w9hOMXY/dashboard-for-task-management",
       "prefs": {
         "permissionLevel": "org",
-        "comments": "members",
         "background": "#f4f4f4"
       },
       "labelNames": {
@@ -121,11 +118,8 @@
       "name": "Trello Clone",
       "desc": "",
       "closed": false,
-      "idOrganization": null,
-      "url": "https://trello.com/b/UKXaxOSR/trello-clone",
       "prefs": {
         "permissionLevel": "private",
-        "cardCovers": true,
         "background": "#EEF7FB"
       },
       "labelNames": {
@@ -189,56 +183,44 @@
       ]
     }
   ],
-  "lists": [
-    {
-      "id": "5e34cfa89bea9448a739cd1e",
-      "name": "Backlog",
-      "closed": false,
-      "idBoard": "5e34cf6a4663684f2e768292"
-    }
-  ],
   "cards": [
     {
-      "5e4d79614e7f3f847c08b832": [
+      "id": "5e4d7ba5b9d1084db7f89eea",
+      "closed": false,
+      "desc": "",
+      "idBoard": "5e4d79614e7f3f847c08b832",
+      "idList": "5e4d7a13561c2b54b58a8aff",
+      "idShort": 1,
+      "idAttachmentCover": null,
+      "idLabels": [
+        "5e4d7961af988c41f28160c8"
+      ],
+      "name": "Navigation",
+      "badges": {
+        "checkItems": 5,
+        "checkItemsChecked": 0,
+        "comments": 0,
+        "attachments": 4
+      },
+      "idChecklists": [
+        "5e4d8229322fa8676f21740c"
+      ],
+      "idMembers": [],
+      "labels": [
         {
-          "id": "5e4d7ba5b9d1084db7f89eea",
-          "closed": false,
-          "desc": "",
+          "id": "5e4d7961af988c41f28160c8",
           "idBoard": "5e4d79614e7f3f847c08b832",
-          "idList": "5e4d7a13561c2b54b58a8aff",
-          "idShort": 1,
-          "idAttachmentCover": null,
-          "idLabels": [
-            "5e4d7961af988c41f28160c8"
-          ],
-          "name": "Navigation",
-          "badges": {
-            "checkItems": 5,
-            "checkItemsChecked": 0,
-            "comments": 0,
-            "attachments": 4
-          },
-          "idChecklists": [
-            "5e4d8229322fa8676f21740c"
-          ],
-          "idMembers": [],
-          "labels": [
-            {
-              "id": "5e4d7961af988c41f28160c8",
-              "idBoard": "5e4d79614e7f3f847c08b832",
-              "name": "Component",
-              "color": "blue"
-            }
-          ],
-          "cover": {
-            "idAttachment": null,
-            "color": null,
-            "idUploadedBackground": null,
-            "size": "normal",
-            "brightness": "light"
-          }
+          "name": "Component",
+          "color": "blue"
         }
-      ]
+      ],
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "light"
+      }
     }
   ],
   "checklists": [
