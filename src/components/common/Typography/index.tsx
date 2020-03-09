@@ -43,6 +43,7 @@ const LGStyles = css`
 `
 const MDStyles = css`
 	font-size: 1rem;
+	font-weight: 400;
 `
 const SMStyles = css`
 	font-size: 13px;
