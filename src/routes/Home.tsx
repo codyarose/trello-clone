@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 
 import { useSelector } from 'utils/useReduxSelector'
 import { fetchAllBoards } from 'redux/modules/allBoards'
+import { Track } from 'components/common/Track'
 import { BoardList } from 'components/BoardList'
 
 interface Props {
@@ -19,6 +20,8 @@ export const Home: FC<Props> = () => {
 	}, [dispatch])
 
 	return (
-		<BoardList {...data} />
+		<Track>
+			<BoardList {...data} />
+		</Track>
 	)
 }

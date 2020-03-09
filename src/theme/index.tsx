@@ -36,7 +36,11 @@ export const Theme: FC<Props> = ({ children, mode }) => {
 			font-family: Poppins, sans-serif;
 			margin: 0;
 			background-color: ${theme[mode].base};
-			color: ${theme[mode].font}
+			color: ${theme[mode].font};
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
 		}
 	`
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import styled from 'styled-components'
 
 import { Theme } from 'theme'
 import { Home } from 'routes/Home'
@@ -11,11 +12,17 @@ export const App = () => {
 		<Theme mode="light">
 			<Router basename="trello-clone">
 				<Navbar />
-				<Switch>
-					<Route path="/" exact component={Home} />
-					<Route path="/board/:id" component={Board} />
-				</Switch>
+				<StyledMain>
+					<Switch>
+						<Route path="/" exact component={Home} />
+						<Route path="/board/:id" component={Board} />
+					</Switch>
+				</StyledMain>
 			</Router>
 		</Theme>
 	)
 }
+
+const StyledMain = styled.main`
+	padding: 30px;
+`
