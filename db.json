@@ -359,6 +359,44 @@
         "size": "normal",
         "brightness": "light"
       }
+    },
+    {
+      "id": "5e4d7ba5b9d1084db7f89eea",
+      "closed": false,
+      "desc": "",
+      "idBoard": "5e4d79614e7f3f847c08b832",
+      "idList": "5e4d79614e7f3f847c08b833",
+      "idShort": 1,
+      "idAttachmentCover": null,
+      "idLabels": [
+        "5e4d7961af988c41f28160c8"
+      ],
+      "name": "Other",
+      "badges": {
+        "checkItems": 5,
+        "checkItemsChecked": 0,
+        "comments": 0,
+        "attachments": 4
+      },
+      "idChecklists": [
+        "5e4d8229322fa8676f21740c"
+      ],
+      "idMembers": [],
+      "labels": [
+        {
+          "id": "5e4d7961af988c41f28160c8",
+          "idBoard": "5e4d79614e7f3f847c08b832",
+          "name": "Component",
+          "color": "blue"
+        }
+      ],
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "light"
+      }
     }
   ],
   "checklists": [
