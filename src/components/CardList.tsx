@@ -7,18 +7,29 @@ import { Card } from './common/Card'
 import { NewCard } from './common/NewCard'
 
 interface Props {
-	id: string
+	id?: string
 	name: string
 	closed: boolean
+	items: any[]
 }
 
-export const CardList: FC<Props> = ({ id, name, closed }) => {
+export const CardList: FC<Props> = ({ id, name, closed, items }) => {
 	return (
 		<>
 			{!closed &&
 				<StyledCardList>
 					<StyledHeader>{name}</StyledHeader>
-					{/* <Card type="card" title={name} desc={desc} members={[]} /> */}
+					{items && items.map((item: any) =>
+						<Card
+							type="card"
+							title={item.name}
+							desc={item.desc}
+							members={item.idMembers}
+							labels={item.labels}
+							badges={item.badges}
+						/>
+					)}
+					<NewCard type="card" />
 				</StyledCardList>
 			}
 		</>
@@ -26,7 +37,11 @@ export const CardList: FC<Props> = ({ id, name, closed }) => {
 }
 
 const StyledCardList = styled.div`
-	/*  */
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	gap: 10px;
+	align-content: flex-start;
 `
 
 const StyledHeader = styled(Paper)`
