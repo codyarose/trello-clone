@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import { Theme } from 'theme'
 import { Home } from 'routes/Home'
-import Board from 'routes/Board'
+import { Board } from 'routes/Board'
 import { Navbar } from 'components/Navbar'
 
 export const App = () => {
