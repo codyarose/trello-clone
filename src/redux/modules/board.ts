@@ -7,14 +7,21 @@ const FETCH_BOARD_SUCCESS = 'FETCH_BOARD_SUCCESS'
 const FETCH_BOARD_ERROR = 'FETCH_BOARD_ERROR'
 
 export interface RootState {
-	data: {}
+	data: {
+		id: string
+	}
 	isLoading: boolean
-	error: null
+	error: null | {
+		name: string
+		message: string
+	}
 	json?: any
 }
 
 const initialState: RootState = {
-	data: {},
+	data: {
+		id: ''
+	},
 	isLoading: false,
 	error: null
 }
