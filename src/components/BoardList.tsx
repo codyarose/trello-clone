@@ -7,28 +7,6 @@ import { Card } from './common/Card'
 import { NewCard } from './common/NewCard'
 
 export const BoardList: FC<RootState> = ({ error, isLoading, items }) => {
-	const labels = [
-		{
-			"id": "5e4d7961af988c41f28160c8",
-			"idBoard": "5e4d79614e7f3f847c08b832",
-			"name": "Component",
-			"color": "blue"
-		},
-		{
-			"id": "5e4d7961af988c41f2lsjdii",
-			"idBoard": "5e4d79614e7f3f847c08b832",
-			"name": "Util",
-			"color": "green"
-		}
-	]
-
-	const badges = {
-		"checkItems": 5,
-		"checkItemsChecked": 0,
-		"comments": 9,
-		"attachments": 4
-	}
-
 	return (
 		<>
 			{error && <div>Error: {error.message}</div>}
@@ -37,14 +15,11 @@ export const BoardList: FC<RootState> = ({ error, isLoading, items }) => {
 				<li key={board.id}>
 					<Link to={`/board/${board.id}`}>
 						<Card
-							type="card"
+							type="board"
 							title={board.name}
 							desc={board.desc}
 							members={board.memberships}
 							background={board.prefs.background}
-							imgUrl="https://images.unsplash.com/photo-1583336490127-4f08ed1e93dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=10"
-							labels={labels}
-							badges={badges}
 						/>
 					</Link>
 				</li>
