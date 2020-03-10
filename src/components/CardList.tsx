@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { Paper } from './common/Paper'
 import { Card } from './common/Card'
 import { NewCard } from './common/NewCard'
+import { Icon } from './common/Icon'
 
 interface Props {
 	id?: string
@@ -18,7 +19,12 @@ export const CardList: FC<Props> = ({ id, name, closed, items }) => {
 		<>
 			{!closed &&
 				<StyledCardList>
-					<StyledHeader>{name}</StyledHeader>
+					<StyledHeader>
+						<span>{name}</span>
+						<button>
+							<Icon variant="more" size="lg" />
+						</button>
+					</StyledHeader>
 					{items && items.map((item: any) =>
 						<Card
 							type="card"
@@ -45,5 +51,15 @@ const StyledCardList = styled.div`
 `
 
 const StyledHeader = styled(Paper)`
+	display: flex;
+	justify-content: space-between;
 	padding: 14px 20px 12px;
+
+	button {
+		all: unset;
+		color: rgba(${({ theme }) => theme.accent}, .2);
+		&:hover {
+			color: rgba(${({ theme }) => theme.accent}, .4);
+		}
+	}
 `
