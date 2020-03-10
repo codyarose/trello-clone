@@ -32,6 +32,11 @@ const theme: ITheme = {
 
 export const Theme: FC<Props> = ({ children, mode }) => {
 	const GlobalStyle = createGlobalStyle`
+		html,
+		body,
+		#root {
+			height: 100vh;
+		}
 		body {
 			font-family: Poppins, sans-serif;
 			margin: 0;
@@ -41,6 +46,10 @@ export const Theme: FC<Props> = ({ children, mode }) => {
 				color: inherit;
 				text-decoration: none;
 			}
+		}
+		#root {
+			display: flex;
+			flex-direction: column;
 		}
 	`
 

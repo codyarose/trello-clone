@@ -4,14 +4,15 @@ import styled from 'styled-components'
 import { Typography } from './Typography'
 
 interface Props {
+	type: 'boards' | 'cards'
 	title: string
 }
 
-export const Track: FC<Props> = ({ title, children }) => {
+export const Track: FC<Props> = ({ type, title, children }) => {
 	return (
 		<TrackContainer>
 			<TrackHeader variant="xl">{title}</TrackHeader>
-			<TrackContent>
+			<TrackContent type={type}>
 				{children}
 			</TrackContent>
 		</TrackContainer>
@@ -19,14 +20,17 @@ export const Track: FC<Props> = ({ title, children }) => {
 }
 
 const TrackContainer = styled.div`
-	/*  */
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 `
 
 const TrackHeader = styled(Typography)`
 	margin-bottom: 1rem;
 `
 
-const TrackContent = styled.ul`
+const TrackContent = styled.ul<Partial<Props>>`
+	${({ type }) => type === 'cards' && 'flex-grow: 1;'}
 	list-style-type: none;
 	padding: 0 0 1.5rem;
 	margin: 0;

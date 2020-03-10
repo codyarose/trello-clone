@@ -24,5 +24,6 @@ export const App = () => {
 }
 
 const StyledMain = styled.main`
-	padding: 30px;
+	padding: 30px 30px 1rem;
+	flex-grow: 1;
 `
