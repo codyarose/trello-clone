@@ -16,7 +16,7 @@ interface Props {
 	background?: string
 	imgUrl?: string
 	labels?: any[]
-	badges: any
+	badges?: any
 }
 
 export const Card: FC<Props> = ({ type, title, desc, members, background, imgUrl, labels, badges }) => {
@@ -34,7 +34,7 @@ export const Card: FC<Props> = ({ type, title, desc, members, background, imgUrl
 			<CardTitle variant="md">{title}</CardTitle>
 			{desc && <CardDesc variant="sm">{desc}</CardDesc>}
 			{!!members.length && <Members type={type} array={members} />}
-			<Badges type={type} data={badges} />
+			{badges && <Badges type={type} data={badges} />}
 		</CardContainer>
 	)
 }
