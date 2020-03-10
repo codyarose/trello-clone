@@ -6,22 +6,26 @@ import { fetchAllBoards } from 'redux/modules/allBoards'
 import { Track } from 'components/common/Track'
 import { BoardList } from 'components/BoardList'
 
-interface Props {
-
-}
-
-export const Home: FC<Props> = () => {
+export const Home: FC = () => {
 	const dispatch = useDispatch()
 
 	const data = useSelector(({ allBoards }) => allBoards)
+
+	const { error, isLoading, items } = data
 
 	useEffect(() => {
 		dispatch(fetchAllBoards())
 	}, [dispatch])
 
 	return (
-		<Track>
-			<BoardList {...data} />
-		</Track>
+		<>
+			{error && <div>Error: {error.message}</div>}
+			{isLoading && <div>Loading...</div>}
+			{items &&
+				<Track title="Recently viewed">
+					<BoardList items={items} />
+				</Track>
+			}
+		</>
 	)
 }
