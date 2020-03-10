@@ -4,13 +4,13 @@ import styled from 'styled-components'
 import { Typography } from './Typography'
 
 interface Props {
-
+	title: string
 }
 
-export const Track: FC<Props> = ({ children }) => {
+export const Track: FC<Props> = ({ title, children }) => {
 	return (
 		<TrackContainer>
-			<TrackHeader variant="xl">Recently viewed</TrackHeader>
+			<TrackHeader variant="xl">{title}</TrackHeader>
 			<TrackContent>
 				{children}
 			</TrackContent>
