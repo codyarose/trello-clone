@@ -5,11 +5,13 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import board from './modules/board'
 import allBoards from './modules/allBoards'
 import user from './modules/user'
+import cardsByBoard from './modules/cardsByBoard'
 
 const reducer = combineReducers({
 	user,
 	allBoards,
-	board
+	board,
+	cardsByBoard
 })
 
 const store = createStore(
