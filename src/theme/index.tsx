@@ -35,21 +35,18 @@ export const Theme: FC<Props> = ({ children, mode }) => {
 		html,
 		body,
 		#root {
-			height: 100vh;
+			height: 100%;
 		}
 		body {
 			font-family: Poppins, sans-serif;
 			margin: 0;
 			background-color: ${theme[mode].base};
 			color: ${theme[mode].font};
+			overflow: hidden;
 			a {
 				color: inherit;
 				text-decoration: none;
 			}
-		}
-		#root {
-			display: flex;
-			flex-direction: column;
 		}
 	`
 

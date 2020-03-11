@@ -1,4 +1,5 @@
 import React, { FC, useEffect } from 'react'
+import styled from 'styled-components'
 import { useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
@@ -7,6 +8,7 @@ import { fetchBoard } from 'redux/modules/board'
 import { fetchCardsByBoard } from 'redux/modules/cardsByBoard'
 import { Track } from 'components/common/Track'
 import { CardList } from 'components/CardList'
+import { Typography } from 'components/common/Typography'
 
 interface Props {
 
@@ -33,16 +35,32 @@ export const Board: FC<Props> = () => {
 
 	return (
 		<>
-			<Track type="cards" title={name}>
-				{lists && lists.map((list: any) => (
-					<CardList
-						key={list.id}
-						name={list.name}
-						closed={list.closed}
-						items={filterCards(cards.items, list.id)}
-					/>
-				))}
-			</Track>
+			<BoardHeader variant="xl">{name}</BoardHeader>
+			<TrackContainer>
+				<Track type="cards">
+					{lists && lists.map((list: any) => (
+						<CardList
+							key={list.id}
+							name={list.name}
+							closed={list.closed}
+							items={filterCards(cards.items, list.id)}
+						/>
+					))}
+				</Track>
+			</TrackContainer>
 		</>
 	)
 }
+
+const BoardHeader = styled(Typography)`
+	margin-bottom: 1rem;
+`
+
+const StyledBoard = styled.div`
+	overflow-y: auto;
+`
+
+const TrackContainer = styled.div`
+	position: relative;
+	flex-grow: 1;
+`

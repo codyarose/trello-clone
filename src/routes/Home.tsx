@@ -22,7 +22,7 @@ export const Home: FC = () => {
 			{error && <div>Error: {error.message}</div>}
 			{isLoading && <div>Loading...</div>}
 			{items &&
-				<Track type="boards" title="Recently viewed">
+				<Track type="boards">
 					<BoardList items={items} />
 				</Track>
 			}

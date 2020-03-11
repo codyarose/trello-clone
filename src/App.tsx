@@ -24,6 +24,10 @@ export const App = () => {
 }
 
 const StyledMain = styled.main`
-	padding: 30px 30px 1rem;
-	flex-grow: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	/* padding: 30px 30px 1rem; */
+	/* flex-grow: 1; */
+	/* overflow-x: auto; */
 `

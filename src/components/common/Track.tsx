@@ -1,44 +1,35 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 
-import { Typography } from './Typography'
-
 interface Props {
 	type: 'boards' | 'cards'
-	title: string
 }
 
-export const Track: FC<Props> = ({ type, title, children }) => {
+export const Track: FC<Props> = ({ type, children }) => {
 	return (
-		<TrackContainer>
-			<TrackHeader variant="xl">{title}</TrackHeader>
-			<TrackContent type={type}>
-				{children}
-			</TrackContent>
-		</TrackContainer>
+		<TrackContent type={type}>
+			{children}
+		</TrackContent>
 	)
 }
 
-const TrackContainer = styled.div`
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-`
-
-const TrackHeader = styled(Typography)`
-	margin-bottom: 1rem;
-`
-
-const TrackContent = styled.ul<Partial<Props>>`
+const TrackContent = styled.div<Partial<Props>>`
 	${({ type }) => type === 'cards' && 'flex-grow: 1;'}
-	list-style-type: none;
-	padding: 0 0 1.5rem;
-	margin: 0;
-	display: grid;
+	/* list-style-type: none; */
+	padding-bottom: .5rem;
+	margin-bottom: .5rem;
+	/* margin: 0; */
+	/* display: grid;
 	grid-auto-columns: 362px;
 	grid-auto-flow: column;
-	gap: 30px;
+	gap: 30px; */
 	overflow-x: auto;
+	overflow-y: hidden;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 
 	::-webkit-scrollbar {
 		height: 12px;
